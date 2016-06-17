@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4D0C2D201D146FCC005FA459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D1F1D146FCC005FA459 /* AppDelegate.swift */; };
-		4D0C2D221D146FCC005FA459 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D211D146FCC005FA459 /* FirstViewController.swift */; };
-		4D0C2D241D146FCC005FA459 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D231D146FCC005FA459 /* SecondViewController.swift */; };
 		4D0C2D271D146FCC005FA459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C2D251D146FCC005FA459 /* Main.storyboard */; };
 		4D0C2D291D146FCC005FA459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C2D281D146FCC005FA459 /* Assets.xcassets */; };
 		4D0C2D2C1D146FCC005FA459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C2D2A1D146FCC005FA459 /* LaunchScreen.storyboard */; };
 		4D0C2D371D146FCC005FA459 /* Workout_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D361D146FCC005FA459 /* Workout_iOSTests.swift */; };
+		4DA3EB411D149A0A001124B6 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3EB401D149A0A001124B6 /* Notes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		4D0C2D1C1D146FCC005FA459 /* Workout iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0C2D1F1D146FCC005FA459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D0C2D211D146FCC005FA459 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4D0C2D231D146FCC005FA459 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4D0C2D261D146FCC005FA459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D0C2D281D146FCC005FA459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +36,10 @@
 		4D0C2D321D146FCC005FA459 /* Workout iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Workout iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0C2D361D146FCC005FA459 /* Workout_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_iOSTests.swift; sourceTree = "<group>"; };
 		4D0C2D381D146FCC005FA459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D0C2D411D146FE4005FA459 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		4D0C2D421D146FE4005FA459 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4D0C2D431D146FE4005FA459 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		4DA3EB401D149A0A001124B6 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +81,13 @@
 		4D0C2D1E1D146FCC005FA459 /* Workout iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4D0C2D411D146FE4005FA459 /* Exercise.swift */,
+				4D0C2D421D146FE4005FA459 /* Person.swift */,
+				4D0C2D431D146FE4005FA459 /* Workout.swift */,
 				4D0C2D1F1D146FCC005FA459 /* AppDelegate.swift */,
-				4D0C2D211D146FCC005FA459 /* FirstViewController.swift */,
 				4D0C2D231D146FCC005FA459 /* SecondViewController.swift */,
 				4D0C2D251D146FCC005FA459 /* Main.storyboard */,
+				4DA3EB401D149A0A001124B6 /* Notes */,
 				4D0C2D281D146FCC005FA459 /* Assets.xcassets */,
 				4D0C2D2A1D146FCC005FA459 /* LaunchScreen.storyboard */,
 				4D0C2D2D1D146FCC005FA459 /* Info.plist */,
@@ -188,6 +193,7 @@
 			files = (
 				4D0C2D2C1D146FCC005FA459 /* LaunchScreen.storyboard in Resources */,
 				4D0C2D291D146FCC005FA459 /* Assets.xcassets in Resources */,
+				4DA3EB411D149A0A001124B6 /* Notes in Resources */,
 				4D0C2D271D146FCC005FA459 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,9 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0C2D241D146FCC005FA459 /* SecondViewController.swift in Sources */,
 				4D0C2D201D146FCC005FA459 /* AppDelegate.swift in Sources */,
-				4D0C2D221D146FCC005FA459 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +412,7 @@
 				4D0C2D3D1D146FCC005FA459 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D0C2D3E1D146FCC005FA459 /* Build configuration list for PBXNativeTarget "Workout iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +421,7 @@
 				4D0C2D401D146FCC005FA459 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
