@@ -1,0 +1,10 @@
+- Swipe left to delete people, workouts, exercises
+- touch and hold to reorder
+- gesture to add?
+
+- Keep a history of changes to workouts and exercises
+
+- UITableView editing (in UI) https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableView_Class/index.html
+
+- Exercise View: Edit mode turns parameter labels into drop down menus and places borders around text fields to indicate they are editable
+- Exercise View: Notes text view is always editable (and scrollable?)
