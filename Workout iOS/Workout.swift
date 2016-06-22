@@ -9,16 +9,18 @@
 import Foundation
 
 
-class Workout {
-	let identifier: CFUUID
-	let name: String
-	let workoutDescription: String
-	let exercises: [String] //array of exercise identifiers
+class WorkoutSession {
+	var exercises = [Exercise]()
 	var currentExerciseIndex = 0
 	
+	func addExercise(exercise: Exercise) {
+		exercises.append(exercise)
+	}
 	
 	func nextExercise() -> Exercise {
-		currentExerciseIndex++
+		var nextExercise: Exercise
+		
+		currentExerciseIndex += 1
 		if (currentExerciseIndex > exercises.count-1) {
 			for exercise in exercises {
 				if exercise.completed == false {
@@ -27,11 +29,47 @@ class Workout {
 			}
 		}
 		else {
-			execise = exercises[currentExerciseIndex]
+			nextExercise = exercises[currentExerciseIndex]
 		}
-		return exercise
+		return nextExercise
 	}
 	
-	func exerciseAtIndex(index: Int) -> Exercise {
+	func start(exercise:exercise) {
+	}
+	
+	func endCurrentExercise() {
+	}
+}
+
+
+class Workout {
+	let uuid = CFUUIDCreate(kCFAllocatorDefault)
+	let name: String
+	let shortDescription: String
+	let longDescription: String
+	let sessions = [WorkoutSession]()
+	var currentSessionIndex = 0
+	var lastCompletedDate: Date?
+	var lastSessionDate: Date?
+
+	init(name: String) {
+		self.name = name
+	}
+	
+	func identifier() -> String {
+		return CFUUIDCreateString(kCFAllocatorDefault, uuid) as String
+	}
+	
+	func nextSession(persion: Person) -> WorkoutSession {
+		let session = sessions[currentSessionIndex]
+		currentSessionIndex += 1
+		return session
+	}
+	
+	func start(session: WorkoutSession, exercise: Exercise) {
+		session.start(exercise:exercise)
+	}
+	
+	func endCurrentSession() {
 	}
 }

@@ -8,3 +8,6 @@
 
 - Exercise View: Edit mode turns parameter labels into drop down menus and places borders around text fields to indicate they are editable
 - Exercise View: Notes text view is always editable (and scrollable?)
+
+
+person -> workouts -> sesions -> exercises

@@ -13,6 +13,10 @@
 		4D0C2D2C1D146FCC005FA459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C2D2A1D146FCC005FA459 /* LaunchScreen.storyboard */; };
 		4D0C2D371D146FCC005FA459 /* Workout_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D361D146FCC005FA459 /* Workout_iOSTests.swift */; };
 		4DA3EB411D149A0A001124B6 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3EB401D149A0A001124B6 /* Notes */; };
+		4DC24C6D1D14B78700B2B36D /* WorkoutListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC24C6C1D14B78700B2B36D /* WorkoutListViewControllerTableViewController.swift */; };
+		4DC24C6E1D14B90A00B2B36D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D431D146FE4005FA459 /* Workout.swift */; };
+		4DC24C6F1D14BBA200B2B36D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D411D146FE4005FA459 /* Exercise.swift */; };
+		4DC24C701D14BF3800B2B36D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C2D421D146FE4005FA459 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,7 @@
 		4D0C2D421D146FE4005FA459 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4D0C2D431D146FE4005FA459 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4DA3EB401D149A0A001124B6 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		4DC24C6C1D14B78700B2B36D /* WorkoutListViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 				4D0C2D281D146FCC005FA459 /* Assets.xcassets */,
 				4D0C2D2A1D146FCC005FA459 /* LaunchScreen.storyboard */,
 				4D0C2D2D1D146FCC005FA459 /* Info.plist */,
+				4DC24C6C1D14B78700B2B36D /* WorkoutListViewControllerTableViewController.swift */,
 			);
 			path = "Workout iOS";
 			sourceTree = "<group>";
@@ -212,7 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC24C701D14BF3800B2B36D /* Person.swift in Sources */,
+				4DC24C6D1D14B78700B2B36D /* WorkoutListViewControllerTableViewController.swift in Sources */,
+				4DC24C6F1D14BBA200B2B36D /* Exercise.swift in Sources */,
 				4D0C2D201D146FCC005FA459 /* AppDelegate.swift in Sources */,
+				4DC24C6E1D14B90A00B2B36D /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

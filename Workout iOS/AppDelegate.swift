@@ -12,10 +12,28 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
-
+	var exerciseContexts = [String:ExerciseContext]()
+	var exercises = [String:Exercise]()
+	var workouts = [String:Workout]()
+	let people = [String:Person]()
+	var currentPerson: Person?
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		// temp code to provide canned data for testing
+		let context = ExerciseContext(name:"Barbell Press", type: .Specific)
+		context.exerciseDescription = "This is a description"
+		context.length = 10 //reps
+		context.rest = 60 //seconds
+		context.count = 10 //sets
+		
+		exerciseContexts[context.identifier()] = context
+		let exercise = context.createExercise(value:25)
+		
+		exercises[exercise.identifier()] = exercise
+
+		let workout = Workout(name:"My First Workout")
+		workouts[workout.identifier()] = workout
+
 		return true
 	}
 

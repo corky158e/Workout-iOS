@@ -30,7 +30,7 @@
         <!--Workout List View Controller-->
         <scene sceneID="F0A-fY-UJf">
             <objects>
-                <tableViewController title="Workout List View Controller" id="RZy-SL-m2X" sceneMemberID="viewController">
+                <tableViewController title="Workout List View Controller" id="RZy-SL-m2X" customClass="WorkoutListViewControllerTableViewController" customModule="Workout_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="29c-fm-myp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,8 +10,19 @@ import Foundation
 
 
 class Person {
-	var identifier: Int
+	let identifier = CFUUIDCreate(kCFAllocatorDefault)
 	var name: String
-	var lastSession: NSDate?
-	var workouts: Array<Int> //array of workout identifiers
+	var lastWorkout: String?
+	var workouts: [String]?
+	
+	init(name: String) {
+		self.name = name
+	}
+	
+	func start(workout: Workout, session: WorkoutSession, exercise: Exercise) {
+		workout.start(session:session, exercise:exercise)
+	}
+	
+	func endCurrentWorkout() {
+	}
 }

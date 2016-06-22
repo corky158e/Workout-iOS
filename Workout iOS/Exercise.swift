@@ -10,14 +10,14 @@ import Foundation
 
 
 enum ExerciseType {
-	case Defined
+	case Specific
 	case Open
 }
 
 
 class ExerciseContext {
-	var identifier: CFUUID
-	var type: ExerciseType
+	let uuid = CFUUIDCreate(kCFAllocatorDefault)
+	let type: ExerciseType
 	var name: String
 	var exerciseDescription: String?
 	var picture1URL: URL?
@@ -28,13 +28,16 @@ class ExerciseContext {
 	var count: UInt = 1
 	
 	init(name: String, type: ExerciseType) {
-		self.identifier = CFUUIDCreate(kCFAllocatorDefault)
 		self.name = name
 		self.type = type
 	}
 	
+	func identifier() -> String {
+		return CFUUIDCreateString(kCFAllocatorDefault, uuid) as String
+	}
+	
 	func createExercise(value: Double) -> Exercise {
-		assert(type == .Defined)
+		assert(type == .Specific)
 		assert(value > 0.0)
 		assert(length >  0.0)
 		
@@ -56,9 +59,10 @@ class ExerciseContext {
 
 
 class Exercise {
-	var identifier: CFUUID
+	let uuid = CFUUIDCreate(kCFAllocatorDefault)
 	var context: ExerciseContext
 	var lastCompletedDate: Date?
+	var completed = false
 	
 	class Interval: NSObject, NSCoding {
 		var value = 0.0		//weight (lbs) or speed (mph) depending on exercise type
@@ -82,12 +86,14 @@ class Exercise {
 		}
 	}
 	
-	var intervals: [Interval]
+	var intervals = [Interval]()
 
-	required init(context: ExerciseContext) {
-		identifier = CFUUIDCreate(kCFAllocatorDefault)
+	init(context: ExerciseContext) {
 		self.context = context
-		intervals = []
+	}
+	
+	func identifier() -> String {
+		return CFUUIDCreateString(kCFAllocatorDefault, uuid) as String
 	}
 	
 	func addInterval(value: Double) {
@@ -113,39 +119,4 @@ class Exercise {
 	func decodeIntervals(data: NSData, count: UInt) {
 		//TODO: impl
 	}
-}
-
-func setup ()
-{
-	let barbellPress = ExerciseContext(name:"Barbell Press", type: .Defined)
-	barbellPress.exerciseDescription = "This is a description"
-	barbellPress.length = 10 //reps
-	barbellPress.rest = 60 //seconds
-	barbellPress.count = 10 //sets
-	barbellPress.picture1URL = URL(fileURLWithPath: "path to pic1")
-	barbellPress.picture2URL = URL(fileURLWithPath: "path to pic2")
-	barbellPress.videoURL = URL(fileURLWithPath: "path to video")
-}
-
-func someFunction()
-{
-	let controller = WorkoutEditorController()
-	controller.workoutIdentifier = identifier
-	[controller.window showModal:^(NSResult result){
-	}]
-	
-}
-
-func addExercise(ofType context: ExerciseContext, toWorkout identifier: CFUUID)
-{
-	let controller = ExerciseEditorController()
-	controller.context = description
-	[controller.window showModal:^(NSResult result){
-		if (description.type == .Defined) {
-			description.createExercise(value:controller.value)
-		}
-		else {
-			description.createExercise(value:controller.value, length:controller.length, rest:controller.rest, conut:controller.count)
-		}
-	}]
 }
